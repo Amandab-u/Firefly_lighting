@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.firefly">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application
+        android:name=".BasicApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/firefly_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/firefly_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- This is the parent activity -->
+        <activity
+            android:name=".ui.ListaProyectos"
+            android:label="Proyectos" />
+        <!-- These are the child -->
+        <activity
+            android:name=".ui.DatosProyecto"
+            android:label="Nuevo Proyecto"
+            android:parentActivityName=".ui.ListaProyectos"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.DatosLocal"
+            android:label="Datos Local"
+            android:parentActivityName=".ui.ListaProyectos"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.DatosLuminaria"
+            android:label="Datos Luminaria"
+            android:parentActivityName=".ui.ListaProyectos" />
+        <activity
+            android:name=".ui.DetallesLuminariaCat"
+            android:label="Detalles Luminarias" />
+        <activity
+            android:name=".ui.Catalogo"
+            android:label="Catalogo de Luminarias" />
+        <activity
+            android:name=".ui.ResultadosBasicos"
+            android:label="Resultados Basicos"
+            android:parentActivityName=".ui.ListaProyectos" />
+        <activity
+            android:name=".ui.AnalisisElectrico"
+            android:label="Analisis Electrico"
+            android:parentActivityName=".ui.ListaProyectos" />
+        <activity
+            android:name=".ui.ConfortVisual"
+            android:label="Confort Visual"
+            android:parentActivityName=".ui.ListaProyectos" />
+        <activity
+            android:name=".ui.Verificacion"
+            android:label="Verificacion"
+            android:parentActivityName=".ui.ListaProyectos" />
+        <activity android:name=".ui.ResultadosFinales"
+            android:parentActivityName=".ui.ListaProyectos"
+            android:label="Resultados Generales"/>
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+    </application>
+
+</manifest>

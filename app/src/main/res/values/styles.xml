@@ -1,0 +1,75 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">#ffd54f</item>
+    </style>
+
+    <!-- Style for a ActionBar text -->
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
+
+        <item name="android:textSize">28dp</item>
+<!--        <item name="android:textStyle">bold</item>-->
+        <item name="android:textColor">@color/colorText</item>
+
+    </style>
+
+    <!-- Style for all the text in the app -->
+    <style name="titleStyle">
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="questionStyle">
+        <item name="android:padding">12dp</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="detailsStyle">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+    <style name="botonStyle">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="accentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="landingStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginTop">16dp</item>
+
+    </style>
+
+    <style name="subtitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/secondaryColor</item>
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+        <item name="android:textAllCaps">true</item>
+
+    </style>
+
+
+</resources>

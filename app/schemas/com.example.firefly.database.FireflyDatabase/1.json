@@ -1,0 +1,1102 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "15a573f5cfbb69580665fd7e2df51b58",
+    "entities": [
+      {
+        "tableName": "catalogo_luminarias",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_catalogo` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre_luminaria` TEXT, `descripciton_luminaria` TEXT, `flujo_luminoso_total` INTEGER NOT NULL, `light_output_rate` REAL NOT NULL, `flujo_luminoso` INTEGER NOT NULL, `potencia_electrica` INTEGER NOT NULL, `indice_rc` INTEGER NOT NULL, `temperatura_color` INTEGER NOT NULL, `imagenLumReal` INTEGER NOT NULL, `imagenFotometria` INTEGER NOT NULL, `difusor` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "idCatalogo",
+            "columnName": "id_catalogo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombreLuminaria",
+            "columnName": "nombre_luminaria",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "descripcionLuminaria",
+            "columnName": "descripciton_luminaria",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "flujoLumTotal",
+            "columnName": "flujo_luminoso_total",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lightOutputRate",
+            "columnName": "light_output_rate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "flujoLuminoso",
+            "columnName": "flujo_luminoso",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "potenciaElectrica",
+            "columnName": "potencia_electrica",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "indiceRc",
+            "columnName": "indice_rc",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "temperaturaColor",
+            "columnName": "temperatura_color",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imagenLumReal",
+            "columnName": "imagenLumReal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imagenFotometria",
+            "columnName": "imagenFotometria",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "difusor",
+            "columnName": "difusor",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_catalogo"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "profundidad_luminarias",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_profundidad` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `profundidad` REAL NOT NULL, `idLuminariaP` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "idProfundidad",
+            "columnName": "id_profundidad",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profundidad",
+            "columnName": "profundidad",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idLuminariaP",
+            "columnName": "idLuminariaP",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_profundidad"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "largo_luminaria",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_largo` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `largo_lum` REAL NOT NULL, `idLuminaria` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id_largo",
+            "columnName": "id_largo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "largo",
+            "columnName": "largo_lum",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idLuminaria",
+            "columnName": "idLuminaria",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_largo"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ancho_luminaria",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_ancho` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `ancho` REAL NOT NULL, `idLuminariaA` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id_ancho",
+            "columnName": "id_ancho",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ancho",
+            "columnName": "ancho",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idLuminariaA",
+            "columnName": "idLuminariaA",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_ancho"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "alto_luminaria",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_alto` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `alto` REAL NOT NULL, `idLuminariaAl` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id_alto",
+            "columnName": "id_alto",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "alto",
+            "columnName": "alto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idLuminariaAl",
+            "columnName": "idLuminariaAl",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_alto"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "diametro_luminaria",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_diametro` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `diametro` REAL NOT NULL, `idLuminariaD` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id_diametro",
+            "columnName": "id_diametro",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diametro",
+            "columnName": "diametro",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idLuminariaD",
+            "columnName": "idLuminariaD",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_diametro"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Balasto",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_balasto` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `balasto` TEXT, `idLuminariaB` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id_balasto",
+            "columnName": "id_balasto",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "balasto",
+            "columnName": "balasto",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "idLuminariaB",
+            "columnName": "idLuminariaB",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_balasto"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "proyectos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_proyecto` INTEGER NOT NULL, `nombre_proyectos` TEXT, `consumoElectrico` INTEGER, `encuesta` INTEGER, `verificacion` INTEGER, PRIMARY KEY(`id_proyecto`))",
+        "fields": [
+          {
+            "fieldPath": "id_proyecto",
+            "columnName": "id_proyecto",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombreProyecto",
+            "columnName": "nombre_proyectos",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "consumoElectrico",
+            "columnName": "consumoElectrico",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "encuesta",
+            "columnName": "encuesta",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "verificacion",
+            "columnName": "verificacion",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_proyecto"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "datos_local",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_local` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_proyectoL` INTEGER NOT NULL, `iluminanciaNorma` INTEGER NOT NULL, `largoLocal` REAL NOT NULL, `altoLocal` REAL NOT NULL, `anchoLocal` REAL NOT NULL, `altoTrabajo` REAL NOT NULL, `id_factor_mantenimiento` INTEGER NOT NULL, `id_rPared` INTEGER NOT NULL, `id_rTecho` INTEGER NOT NULL, `id_rPiso` INTEGER NOT NULL, `id_rTrabajo` INTEGER NOT NULL, `superficiePared` REAL NOT NULL, `superficieTecho` REAL NOT NULL, `superficiePiso` REAL NOT NULL, `superficieTrabajo` REAL NOT NULL, `numero_luminarias` INTEGER NOT NULL, FOREIGN KEY(`id_proyectoL`) REFERENCES `proyectos`(`id_proyecto`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id_local",
+            "columnName": "id_local",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_proyectoL",
+            "columnName": "id_proyectoL",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iluminanciaNorma",
+            "columnName": "iluminanciaNorma",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "largoLocal",
+            "columnName": "largoLocal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "altoLocal",
+            "columnName": "altoLocal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "anchoLocal",
+            "columnName": "anchoLocal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "altoTrabajo",
+            "columnName": "altoTrabajo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_factor_mantenimiento",
+            "columnName": "id_factor_mantenimiento",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_rPared",
+            "columnName": "id_rPared",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_rTecho",
+            "columnName": "id_rTecho",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_rPiso",
+            "columnName": "id_rPiso",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_rTrabajo",
+            "columnName": "id_rTrabajo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "superficiePared",
+            "columnName": "superficiePared",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "superficieTecho",
+            "columnName": "superficieTecho",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "superficiePiso",
+            "columnName": "superficiePiso",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "superficieTrabajo",
+            "columnName": "superficieTrabajo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numeroLuminarias",
+            "columnName": "numero_luminarias",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_local"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "proyectos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_proyectoL"
+            ],
+            "referencedColumns": [
+              "id_proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "datos_luminaria",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_luminaria` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_proyecto` INTEGER NOT NULL, `idLuminariaSelect` INTEGER NOT NULL, `nombreLuminariaSelec` TEXT, `potencia` REAL NOT NULL, `coordenadaX` REAL NOT NULL, `coordenadaY` REAL NOT NULL, `coordenadaZ` REAL NOT NULL, FOREIGN KEY(`id_proyecto`) REFERENCES `proyectos`(`id_proyecto`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id_luminaria",
+            "columnName": "id_luminaria",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_proyecto",
+            "columnName": "id_proyecto",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idLuminariaSelect",
+            "columnName": "idLuminariaSelect",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombreLuminariaSelec",
+            "columnName": "nombreLuminariaSelec",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "potencia",
+            "columnName": "potencia",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coordenadaX",
+            "columnName": "coordenadaX",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coordenadaY",
+            "columnName": "coordenadaY",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coordenadaZ",
+            "columnName": "coordenadaZ",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_luminaria"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "proyectos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_proyecto"
+            ],
+            "referencedColumns": [
+              "id_proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "planos_angulo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_planos_angulos` INTEGER NOT NULL, `plano` TEXT, PRIMARY KEY(`id_planos_angulos`))",
+        "fields": [
+          {
+            "fieldPath": "id_planos_angulos",
+            "columnName": "id_planos_angulos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "plano",
+            "columnName": "plano",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_planos_angulos"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "fotometria",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_fotometria` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_plano_angulo` INTEGER NOT NULL, `angulo` REAL NOT NULL, `intensidad` REAL NOT NULL, `id_luminaria` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id_fotometria",
+            "columnName": "id_fotometria",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_plano_angulo",
+            "columnName": "id_plano_angulo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "angulo",
+            "columnName": "angulo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "intensidad",
+            "columnName": "intensidad",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_luminaria",
+            "columnName": "id_luminaria",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_fotometria"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "consumo_electrico",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idConsumo` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_proyectoC` INTEGER NOT NULL, `voltaje_alimentacion` REAL NOT NULL, `corriente_alimenatcion` REAL NOT NULL, `factor_potencia` REAL NOT NULL, `horas_semanal` REAL NOT NULL, FOREIGN KEY(`id_proyectoC`) REFERENCES `proyectos`(`id_proyecto`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "idConsumo",
+            "columnName": "idConsumo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_proyectoC",
+            "columnName": "id_proyectoC",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "voltaje_alimentacion",
+            "columnName": "voltaje_alimentacion",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "corriente_alimenatcion",
+            "columnName": "corriente_alimenatcion",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "factor_potencia",
+            "columnName": "factor_potencia",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "horas_semanal",
+            "columnName": "horas_semanal",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idConsumo"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "proyectos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_proyectoC"
+            ],
+            "referencedColumns": [
+              "id_proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "puntos_analisis",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idPuntosAnalisis` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_proyectoPA` INTEGER NOT NULL, `coordenadaX` REAL NOT NULL, `coordenadaY` REAL NOT NULL, FOREIGN KEY(`id_proyectoPA`) REFERENCES `proyectos`(`id_proyecto`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "idPuntosAnalisis",
+            "columnName": "idPuntosAnalisis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_proyectoPA",
+            "columnName": "id_proyectoPA",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coordenadaX",
+            "columnName": "coordenadaX",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coordenadaY",
+            "columnName": "coordenadaY",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idPuntosAnalisis"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "proyectos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_proyectoPA"
+            ],
+            "referencedColumns": [
+              "id_proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "verificacion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idVerificacion` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_proyectoV` INTEGER NOT NULL, `iluminanciaMedida` REAL NOT NULL, FOREIGN KEY(`id_proyectoV`) REFERENCES `proyectos`(`id_proyecto`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "idVerificacion",
+            "columnName": "idVerificacion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_proyectoV",
+            "columnName": "id_proyectoV",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iluminanciaMedida",
+            "columnName": "iluminanciaMedida",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idVerificacion"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "proyectos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_proyectoV"
+            ],
+            "referencedColumns": [
+              "id_proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "resultados_basicos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idResultadosB` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_proyectoRB` INTEGER NOT NULL, `iluminanciamedia` REAL NOT NULL, `iluminanciaMax` REAL NOT NULL, `iluminanciaMin` REAL NOT NULL, `uniformidad` REAL NOT NULL, FOREIGN KEY(`id_proyectoRB`) REFERENCES `proyectos`(`id_proyecto`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "idResultadosB",
+            "columnName": "idResultadosB",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_proyectoRB",
+            "columnName": "id_proyectoRB",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iluminanciamedia",
+            "columnName": "iluminanciamedia",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iluminanciaMax",
+            "columnName": "iluminanciaMax",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iluminanciaMin",
+            "columnName": "iluminanciaMin",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uniformidad",
+            "columnName": "uniformidad",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idResultadosB"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "proyectos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_proyectoRB"
+            ],
+            "referencedColumns": [
+              "id_proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "iluminancia_calculada",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idIluCalculada` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_proyectoIC` INTEGER NOT NULL, `iluminanciaCalculada` REAL NOT NULL, FOREIGN KEY(`id_proyectoIC`) REFERENCES `proyectos`(`id_proyecto`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "idIluCalculada",
+            "columnName": "idIluCalculada",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_proyectoIC",
+            "columnName": "id_proyectoIC",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iluminanciaCalculada",
+            "columnName": "iluminanciaCalculada",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idIluCalculada"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "proyectos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_proyectoIC"
+            ],
+            "referencedColumns": [
+              "id_proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "encuesta_resultados",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`encuestaId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_proyectoE` INTEGER NOT NULL, `percentPatologiaSi` REAL NOT NULL, `percentLeer` REAL NOT NULL, `percentManiObjSim` REAL NOT NULL, `percentManiObjPeq` REAL NOT NULL, `percentManiMaq` REAL NOT NULL, `percentUsarOrd` REAL NOT NULL, `percentDificultadMuy` REAL NOT NULL, `percentDificultadDif` REAL NOT NULL, `percentDificultadMedio` REAL NOT NULL, `percentDificultadFacil` REAL NOT NULL, `percentDificultadMuyF` REAL NOT NULL, `percentPosturaSi` REAL NOT NULL, `percentAnomaliaArdor` REAL NOT NULL, `percentAnomaliaDolor` REAL NOT NULL, `percentAnomaliaDisting` REAL NOT NULL, `percentAnomaliaNuca` REAL NOT NULL, `percentAnomaliaNone` REAL NOT NULL, `percentCambiarPSi` REAL NOT NULL, `percentPercibeMuyA` REAL NOT NULL, `percentPercibeAmplio` REAL NOT NULL, `percentPercibeAcorde` REAL NOT NULL, `percentPercibeEstrecho` REAL NOT NULL, `percentPercibeMuyE` REAL NOT NULL, `promedioEdad` REAL NOT NULL, FOREIGN KEY(`id_proyectoE`) REFERENCES `proyectos`(`id_proyecto`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "encuestaId",
+            "columnName": "encuestaId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_proyectoE",
+            "columnName": "id_proyectoE",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentPatologiaSi",
+            "columnName": "percentPatologiaSi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentLeer",
+            "columnName": "percentLeer",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentManiObjSim",
+            "columnName": "percentManiObjSim",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentManiObjPeq",
+            "columnName": "percentManiObjPeq",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentManiMaq",
+            "columnName": "percentManiMaq",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentUsarOrd",
+            "columnName": "percentUsarOrd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentDificultadMuy",
+            "columnName": "percentDificultadMuy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentDificultadDif",
+            "columnName": "percentDificultadDif",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentDificultadMedio",
+            "columnName": "percentDificultadMedio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentDificultadFacil",
+            "columnName": "percentDificultadFacil",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentDificultadMuyF",
+            "columnName": "percentDificultadMuyF",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentPosturaSi",
+            "columnName": "percentPosturaSi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentAnomaliaArdor",
+            "columnName": "percentAnomaliaArdor",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentAnomaliaDolor",
+            "columnName": "percentAnomaliaDolor",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentAnomaliaDisting",
+            "columnName": "percentAnomaliaDisting",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentAnomaliaNuca",
+            "columnName": "percentAnomaliaNuca",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentAnomaliaNone",
+            "columnName": "percentAnomaliaNone",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentCambiarPSi",
+            "columnName": "percentCambiarPSi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentPercibeMuyA",
+            "columnName": "percentPercibeMuyA",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentPercibeAmplio",
+            "columnName": "percentPercibeAmplio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentPercibeAcorde",
+            "columnName": "percentPercibeAcorde",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentPercibeEstrecho",
+            "columnName": "percentPercibeEstrecho",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentPercibeMuyE",
+            "columnName": "percentPercibeMuyE",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "promedioEdad",
+            "columnName": "promedioEdad",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "encuestaId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "proyectos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_proyectoE"
+            ],
+            "referencedColumns": [
+              "id_proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "analisis_electrico_resultados",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idResult` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_proyectoAEresult` INTEGER NOT NULL, `potenciaIdeal` REAL NOT NULL, `potenciaReal` REAL NOT NULL, FOREIGN KEY(`id_proyectoAEresult`) REFERENCES `proyectos`(`id_proyecto`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "idResult",
+            "columnName": "idResult",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id_proyectoAEresult",
+            "columnName": "id_proyectoAEresult",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "potenciaIdeal",
+            "columnName": "potenciaIdeal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "potenciaReal",
+            "columnName": "potenciaReal",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idResult"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "proyectos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_proyectoAEresult"
+            ],
+            "referencedColumns": [
+              "id_proyecto"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '15a573f5cfbb69580665fd7e2df51b58')"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Firefly Lighting</string>
+
+    <!-- Estas son las opciones para el dropdown menu de aplicaciones de la norma -->
+    <string name="seleccionar">Seleccionar</string>
+    <string name="salon_conferencia">Salon de Conferencias</string>
+    <string name="pantalla">Pantallas (PC,TV)</string>
+    <string name="lapiz_pizarra">Lapiz o Pizarrones</string>
+    <string name="lapiz_cuatro">Lapiz #4 o mas Duros</string>
+    <string name="oficina">Oficina (Boligrafo y Marcador)</string>
+
+    <!-- Estas son las opciones para el dropdown menu de reflectancia pared -->
+    <string name="pared_claro">Claro</string>
+    <string name="pared_medio">Medio</string>
+    <string name="pared_oscuro">Oscuro</string>
+
+    <!-- Estas son las opciones para el dropdown menu de reflectancia techo -->
+    <string name="techo_blanco">Blanco o Muy Claro</string>
+    <string name="techo_claro">Claro</string>
+    <string name="techo_medio">Medio</string>
+
+    <!-- Estas son las opciones para el dropdown menu de reflectancia piso -->
+    <string name="piso_claro">Claro</string>
+    <string name="piso_oscuro">Oscuro</string>
+
+    <!-- Estas son las opciones para el dropdown menu de reflectancia Superficie de trabajo  -->
+    <string name="trabajo_blanco">Blanco</string>
+    <string name="gris_claro">Gris Claro</string>
+    <string name="gris_oscuro">Gris Oscuro</string>
+    <string name="negro">Negro</string>
+    <string name="crema">Crema</string>
+    <string name="marron_claro">Marron Claro</string>
+    <string name="marron_oscuro">Marron Oscuro</string>
+    <string name="rosa">Rosa</string>
+    <string name="rojo_claro">Rojo Claro</string>
+    <string name="rojo_oscuro">Rojo Oscuro</string>
+    <string name="verde_claro">Verde Claro</string>
+    <string name="verde_oscuro">Verde Oscuro</string>
+    <string name="azul_claro">Azul Claro</string>
+    <string name="azul_oscuro">Azul Oscuro</string>
+
+    <!-- Estas son las opciones para el dropdown menu de Factor de Mantenimiento -->
+    <string name="muy_limpio">Muy Limpio</string>
+    <string name="limpio">Limpio</string>
+    <string name="normal">Normal</string>
+    <string name="sucio">Sucio</string>
+
+
+    <item name="coordenada_x" type="id" />
+    <item name="coordenada_y" type="id" />
+    <item name="coordenada_z" type="id" />
+
+</resources>

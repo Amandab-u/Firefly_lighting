@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:id="@+id/landing_logo_image"
+        android:layout_width="254dp"
+        android:layout_height="254dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/firefly_logo"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/titulo_landing_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firefly"
+        android:layout_below="@+id/landing_logo_image"
+        android:layout_centerHorizontal="true"
+        style="@style/landingStyle"/>
+
+    <TextView
+        android:id="@+id/subtitle_landing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lighting"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titulo_landing_1"
+        style="@style/subtitleStyle"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="114dp"
+            android:layout_height="114dp"
+            android:id="@+id/imagen_catalogo"
+            android:layout_margin="10dp"
+            android:contentDescription="Imagen de producto" />
+
+        <TextView
+            android:id="@+id/nombre_descripcion"
+            style="@style/titleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Philips TBS165 G 2x28W"
+            android:layout_toEndOf="@+id/imagen_catalogo"/>
+
+        <TextView
+            android:id="@+id/flujo_luminsoso"
+            style="@style/detailsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flujo Luminoso: 3400lm"
+            android:layout_below="@+id/nombre_descripcion"
+            android:layout_toEndOf="@id/imagen_catalogo"/>
+        <TextView
+            android:id="@+id/potencia"
+            style="@style/detailsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Potencia: 61W"
+            android:layout_below="@+id/flujo_luminsoso"
+            android:layout_toEndOf="@id/imagen_catalogo"/>
+
+
+            <TextView
+                android:id="@+id/dimensiones_luminaria"
+                style="@style/detailsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imagen_catalogo"
+                android:layout_below="@id/potencia"/>
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

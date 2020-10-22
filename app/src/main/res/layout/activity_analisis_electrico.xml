@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.AnalisisElectrico">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/voltaje_alimentacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Voltaje de Alimentacion Medido"
+        app:met_floatingLabelAlwaysShown="true"
+        app:met_floatingLabelTextColor="@color/black"
+        app:met_floatingLabelTextSize="20dp"
+        app:met_floatingLabelPadding="14dp"
+        android:hint="Voltios"
+        android:layout_margin="16dp"
+        app:met_primaryColor="@color/secondaryColor"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/corriente_alimentacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/voltaje_alimentacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Corriente de Alimentacion Medido"
+        app:met_floatingLabelAlwaysShown="true"
+        app:met_floatingLabelTextColor="@color/black"
+        app:met_floatingLabelTextSize="20dp"
+        app:met_floatingLabelPadding="14dp"
+        android:hint="Amperios"
+        android:layout_margin="16dp"
+        app:met_primaryColor="@color/secondaryColor"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/factor_potencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/corriente_alimentacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Factor de Potencia"
+        app:met_floatingLabelAlwaysShown="true"
+        app:met_floatingLabelTextColor="@color/black"
+        app:met_floatingLabelTextSize="20dp"
+        app:met_floatingLabelPadding="14dp"
+        android:hint="0,8"
+        android:layout_margin="16dp"
+        app:met_primaryColor="@color/secondaryColor"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/horas_semanal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/factor_potencia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Horas de Uso del Sistema"
+        app:met_floatingLabelAlwaysShown="true"
+        app:met_floatingLabelTextColor="@color/black"
+        app:met_floatingLabelTextSize="20dp"
+        app:met_floatingLabelPadding="14dp"
+        android:hint="horas/semana"
+        android:layout_margin="16dp"
+        app:met_primaryColor="@color/secondaryColor"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ira_confort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/secondaryColor"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:src="@drawable/ic_navigate_next_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="p"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

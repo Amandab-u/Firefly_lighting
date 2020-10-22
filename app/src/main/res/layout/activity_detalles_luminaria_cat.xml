@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetallesLuminariaCat">
+
+    <TextView
+        android:id="@+id/nombre_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/titleStyle"/>
+
+
+    <TextView
+        android:id="@+id/descripcion_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombre_luminaria"
+        style="@style/detailsStyle"/>
+
+    <ImageView
+        android:id="@+id/luminaria_real"
+        android:layout_width="224dp"
+        android:layout_height="224dp"
+        android:layout_below="@id/descripcion_luminaria"/>
+
+    <ImageView
+        android:id="@+id/fotometria_catalogo"
+        android:layout_width="224dp"
+        android:layout_height="224dp"
+        android:layout_toEndOf="@id/luminaria_real"
+        android:layout_alignTop="@id/luminaria_real"/>
+
+    <TextView
+        android:id="@+id/size_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Dark"
+        android:layout_below="@id/luminaria_real"/>
+    <TextView
+        android:id="@+id/balasto_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Dark"
+        android:layout_below="@id/size_luminaria"/>
+
+    <TextView
+        android:id="@+id/flujo_luminaria_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Dark"
+        android:layout_below="@id/balasto_luminaria"/>
+    <TextView
+        android:id="@+id/ratio_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Dark"
+        android:layout_below="@id/flujo_luminaria_total"/>
+    <TextView
+        android:id="@+id/flujo_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Dark"
+        android:layout_below="@id/ratio_luminaria"/>
+    <TextView
+        android:id="@+id/potencia_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Dark"
+        android:layout_below="@id/flujo_luminaria"/>
+    <TextView
+        android:id="@+id/irc_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Dark"
+        android:layout_below="@id/potencia_luminaria"/>
+    <TextView
+        android:id="@+id/temperatura_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Dark"
+        android:layout_below="@id/irc_luminaria" />
+    <TextView
+        android:id="@+id/difusor_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Dark"
+        android:layout_below="@id/temperatura_luminaria"/>
+
+    <EditText
+        android:padding="16dp"
+        android:id="@+id/altura_colgante"
+        android:hint="Introduzca Altura Colgante de Luminaria (m)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/difusor_luminaria"
+        android:visibility="gone"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/seleccionar_luminaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        style="@style/botonStyle"
+        android:text="Seleccionar"
+        android:backgroundTint="@color/secondaryColor"/>
+
+</RelativeLayout>

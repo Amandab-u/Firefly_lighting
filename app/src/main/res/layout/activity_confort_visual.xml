@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ConfortVisual">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/numero_encuestas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelAlwaysShown="true"
+            app:met_floatingLabelPadding="14dp"
+            app:met_floatingLabelText="Numero de Encuestados"
+            app:met_floatingLabelTextColor="@color/black"
+            app:met_floatingLabelTextSize="20dp"
+            app:met_primaryColor="@color/secondaryColor" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edad_encuestado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="18-65"
+            android:paddingBottom="16dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelAlwaysShown="true"
+            app:met_floatingLabelPadding="14dp"
+            app:met_floatingLabelText="Edad"
+            app:met_floatingLabelTextColor="@color/black"
+            app:met_floatingLabelTextSize="20dp"
+            app:met_primaryColor="@color/secondaryColor" />
+
+        <TextView
+            android:id="@+id/pregunta1"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="¿Posee alguna patologia visual?"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/edad_encuestado" />
+
+        <RadioGroup
+            android:id="@+id/patologia_visual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/pregunta1">
+
+            <RadioButton
+                android:id="@+id/si_patologia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si" />
+
+            <RadioButton
+                android:id="@+id/no_patologia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/pregunta2"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="¿Cuales de estas actividades realiza en sus labores?"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/patologia_visual" />
+
+        <CheckBox
+            android:id="@+id/actividad_leer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leer o Escribir"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pregunta2" />
+
+        <CheckBox
+            android:id="@+id/actividad_coloressim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manipular objetos de colores similares"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actividad_leer" />
+
+        <CheckBox
+            android:id="@+id/actividad_objetos_pequeños"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manipular objetos pequeños"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actividad_coloressim" />
+
+        <CheckBox
+            android:id="@+id/actividad_maquinas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manipular maquinas o herramientas"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actividad_objetos_pequeños" />
+
+        <CheckBox
+            android:id="@+id/actividad_compu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usar ordenadores de escritotiro o portatiles"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actividad_maquinas" />
+
+        <TextView
+            android:id="@+id/pregunta3"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="¿Que tan dificil es realizar su labor con el sistema de iluminacion Existente?"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/actividad_compu" />
+
+        <RadioGroup
+            android:id="@+id/dificultad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/pregunta3">
+
+            <RadioButton
+                android:id="@+id/muy_dificil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muy dificil" />
+
+            <RadioButton
+                android:id="@+id/dificil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dificil" />
+
+            <RadioButton
+                android:id="@+id/medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medio" />
+
+            <RadioButton
+                android:id="@+id/facil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facil" />
+
+            <RadioButton
+                android:id="@+id/muy_facil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muy Facil" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/pregunta4"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="¿Debe cambiar frecuentemente de postura para realizar su labor?"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/dificultad" />
+
+        <RadioGroup
+            android:id="@+id/posture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/pregunta4">
+
+            <RadioButton
+                android:id="@+id/si_postura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si" />
+
+            <RadioButton
+                android:id="@+id/no_postura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/pregunta5"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="¿Cuales de estas anomalias padece al finalizar su labor?"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/posture" />
+
+        <CheckBox
+            android:id="@+id/anomalia_ardor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ardor en los ojos"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pregunta5" />
+
+        <CheckBox
+            android:id="@+id/anomalia_dolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dolor de cabeza"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/anomalia_ardor" />
+
+        <CheckBox
+            android:id="@+id/anomalia_distinguir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dificultad para distinguir objetos"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/anomalia_dolor" />
+
+        <CheckBox
+            android:id="@+id/anomalia_nuca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Molestia en la nuca o columna vertebral"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/anomalia_distinguir" />
+
+        <CheckBox
+            android:id="@+id/anomalia_ninguna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ninguna"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/anomalia_nuca" />
+
+        <TextView
+            android:id="@+id/pregunta6"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="¿Necesita cambiar de posicion para visualizar mejor los objetos?"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/anomalia_ninguna" />
+
+        <RadioGroup
+            android:id="@+id/cambiar_posicion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/pregunta6">
+
+            <RadioButton
+                android:id="@+id/si_cambiar_posicion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si" />
+
+            <RadioButton
+                android:id="@+id/no_cambiar_posicion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/pregunta7"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="¿Como percibe usted el espacio?"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/cambiar_posicion" />
+
+        <RadioGroup
+            android:id="@+id/percibe_espacio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/pregunta7">
+
+            <RadioButton
+                android:id="@+id/muy_amplio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muy Amplio"
+                android:maxLines="2"/>
+
+            <RadioButton
+                android:id="@+id/amplio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amplio" />
+
+            <RadioButton
+                android:id="@+id/acorde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acorde" />
+
+            <RadioButton
+                android:id="@+id/estrecho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estrecho" />
+
+            <RadioButton
+                android:id="@+id/muy_estrecho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muy Estrecho"
+                android:maxLines="1"/>
+        </RadioGroup>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/comenzar_encuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/secondaryColor"
+            android:outlineSpotShadowColor="@color/colorPrimary"
+            android:src="@drawable/ic_navigate_next_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:targetApi="p" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ira_verificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/secondaryColor"
+            android:outlineSpotShadowColor="@color/colorPrimary"
+            android:src="@drawable/ic_navigate_next_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:targetApi="p"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/secondaryColor"
+            android:outlineSpotShadowColor="@color/colorPrimary"
+            android:text="Submit"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/percibe_espacio"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:targetApi="p" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

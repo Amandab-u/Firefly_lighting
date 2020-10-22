@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ui.DatosProyecto">
+
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/insert_nombre_proyecto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="Nombre del Proyecto"
+            app:met_floatingLabelAlwaysShown="true"
+            app:met_floatingLabelTextColor="@color/black"
+            app:met_floatingLabelTextSize="20dp"
+            app:met_floatingLabelPadding="14dp"
+            android:hint="Proyecto N"
+            android:layout_margin="16dp"
+            app:met_primaryColor="@color/secondaryColor" />
+
+        <TextView
+            android:id="@+id/analisis_consumo_electrico"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="¿Desea realizar analisis de Consumo Electrico?"
+            app:layout_constraintTop_toBottomOf="@id/insert_nombre_proyecto" />
+
+        <RadioGroup
+            android:id="@+id/opciones_analisis_electrico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/analisis_consumo_electrico">
+
+            <RadioButton
+                android:id="@+id/si_analisis_electrico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si" />
+
+            <RadioButton
+                android:id="@+id/no_analisis_electrico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/encuesta_comfort_visual"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="¿Desea realizar encuesta de comfort visual?"
+            app:layout_constraintTop_toBottomOf="@id/opciones_analisis_electrico" />
+
+        <RadioGroup
+            android:id="@+id/opciones_encuesta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/encuesta_comfort_visual">
+
+            <RadioButton
+                android:id="@+id/si_encuesta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si" />
+
+            <RadioButton
+                android:id="@+id/no_encuesta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/analisis_verificacion"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Verificar Resultados"
+            app:layout_constraintTop_toBottomOf="@id/opciones_encuesta" />
+
+        <RadioGroup
+            android:id="@+id/opciones_verificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/analisis_verificacion">
+
+            <RadioButton
+                android:id="@+id/si_verificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si" />
+
+            <RadioButton
+                android:id="@+id/no_verificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/comenzar_analisis"
+            style="@style/botonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondaryColor"
+            android:src="@drawable/ic_navigate_next_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

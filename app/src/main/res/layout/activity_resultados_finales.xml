@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/resultados_finales"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ResultadosFinales">
+
+        <TextView
+            android:id="@+id/text_view1"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:text="Analisis Basico"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_view1"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/luminaria_seleccionada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/image_map" />
+
+        <TextView
+            android:id="@+id/numero_luminarias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/luminaria_seleccionada" />
+
+        <TextView
+            android:id="@+id/iluminancia_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/numero_luminarias" />
+
+        <TextView
+            android:id="@+id/iluminancia_norma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/iluminancia_media" />
+
+        <TextView
+            android:id="@+id/uniformidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/iluminancia_norma" />
+
+        <TextView
+            android:id="@+id/dimensiones_local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/uniformidad" />
+
+        <TextView
+            android:id="@+id/text_view2"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:text="Analisis Electrico"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/dimensiones_local" />
+
+        <TextView
+            android:id="@+id/consumo_nominal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view2" />
+
+        <TextView
+            android:id="@+id/consumo_real"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/consumo_nominal" />
+
+        <TextView
+            android:id="@+id/potencia_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/consumo_real" />
+
+        <TextView
+            android:id="@+id/area_piso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/potencia_total" />
+
+        <TextView
+            android:id="@+id/carga_conectada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/area_piso" />
+
+        <TextView
+            android:id="@+id/text_view3"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:text="Encuesta"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/carga_conectada" />
+
+        <TextView
+            android:id="@+id/edad_promedio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view3" />
+
+        <TextView
+            android:id="@+id/text_view4"
+            style="@style/detailsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Posee alguna patologia visual?"
+            app:layout_constraintTop_toBottomOf="@+id/edad_promedio" />
+
+        <TextView
+            android:id="@+id/pregunta_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view4" />
+
+        <TextView
+            android:id="@+id/text_view5"
+            style="@style/detailsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cuales de estas actividades realiza en sus labores?"
+            app:layout_constraintTop_toBottomOf="@+id/pregunta_1" />
+
+        <TextView
+            android:id="@+id/pregunta_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view5" />
+
+        <TextView
+            android:id="@+id/text_view6"
+            style="@style/detailsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Que tan dificil es realizar su labor con el sistema de iluminacion Existente?"
+            app:layout_constraintTop_toBottomOf="@+id/pregunta_2" />
+
+        <TextView
+            android:id="@+id/pregunta_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view6" />
+
+        <TextView
+            android:id="@+id/text_view7"
+            style="@style/detailsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Debe cambiar frecuentemente de postura para realizar su labor?"
+            app:layout_constraintTop_toBottomOf="@+id/pregunta_3" />
+
+        <TextView
+            android:id="@+id/pregunta_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view7" />
+
+        <TextView
+            android:id="@+id/text_view8"
+            style="@style/detailsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cuales de estas anomalias padece al finalizar su labor?"
+            app:layout_constraintTop_toBottomOf="@+id/pregunta_4" />
+
+        <TextView
+            android:id="@+id/pregunta_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view8" />
+
+        <TextView
+            android:id="@+id/text_view9"
+            style="@style/detailsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Necesita cambiar de posicion para visualizar mejor los objetos?"
+            app:layout_constraintTop_toBottomOf="@+id/pregunta_5" />
+
+        <TextView
+            android:id="@+id/pregunta_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view9" />
+
+        <TextView
+            android:id="@+id/text_view10"
+            style="@style/detailsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Como percibe usted el espacio?"
+            app:layout_constraintTop_toBottomOf="@+id/pregunta_6" />
+
+        <TextView
+            android:id="@+id/pregunta_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view10" />
+
+        <TextView
+            android:id="@+id/text_view11"
+            style="@style/questionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:text="Verificacion de Resultados"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/pregunta_7" />
+
+        <LinearLayout
+            android:id="@+id/verif_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/text_view11" />
+        <Button
+            android:id="@+id/generar_reporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/secondaryColor"
+            android:outlineSpotShadowColor="@color/colorPrimary"
+            android:text="Generar Reporte"
+            app:layout_constraintTop_toBottomOf="@id/verif_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:targetApi="p" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

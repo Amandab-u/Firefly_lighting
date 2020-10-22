@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Estas son las opciones para el dropdown menu de aplicaciones de la norma -->
+    <string-array name="array_norma_options">
+        <item>@string/seleccionar</item>
+        <item>@string/salon_conferencia</item>
+        <item>@string/pantalla</item>
+        <item>@string/lapiz_pizarra</item>
+        <item>@string/lapiz_cuatro</item>
+        <item>@string/oficina</item>
+    </string-array>
+
+    <!-- Estas son las opciones para el dropdown menu de reflectancia pared -->
+    <string-array name="array_rpared_options">
+        <item>@string/seleccionar</item>
+        <item>@string/pared_claro</item>
+        <item>@string/pared_medio</item>
+        <item>@string/pared_oscuro</item>
+    </string-array>
+
+    <!-- Estas son las opciones para el dropdown menu de reflectancia techo -->
+    <string-array name="array_rtecho_options">
+        <item>@string/seleccionar</item>
+        <item>@string/techo_blanco</item>
+        <item>@string/techo_claro</item>
+        <item>@string/techo_medio</item>
+    </string-array>
+
+    <!-- Estas son las opciones para el dropdown menu de reflectancia piso -->
+    <string-array name="array_rpiso_options">
+        <item>@string/seleccionar</item>
+        <item>@string/piso_claro</item>
+        <item>@string/piso_oscuro</item>
+    </string-array>
+
+    <!-- Estas son las opciones para el dropdown menu de refelctancia de la superficie de trabajo -->
+    <string-array name="array_rtrabajo_options">
+        <item>@string/seleccionar</item>
+        <item>@string/trabajo_blanco</item>
+        <item>@string/gris_claro</item>
+        <item>@string/gris_oscuro</item>
+        <item>@string/negro</item>
+        <item>@string/crema</item>
+        <item>@string/marron_claro</item>
+        <item>@string/marron_oscuro</item>
+        <item>@string/rosa</item>
+        <item>@string/rojo_claro</item>
+        <item>@string/rojo_oscuro</item>
+        <item>@string/verde_claro</item>
+        <item>@string/verde_oscuro</item>
+        <item>@string/azul_claro</item>
+        <item>@string/azul_oscuro</item>
+    </string-array>
+
+    <!-- Estas son las opciones para el dropdown menu de factor de mantenimiento -->
+    <string-array name="array_mantenimiento_options">
+        <item>@string/seleccionar</item>
+        <item>@string/muy_limpio</item>
+        <item>@string/limpio</item>
+        <item>@string/normal</item>
+        <item>@string/sucio</item>
+    </string-array>
+
+</resources>
